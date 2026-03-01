@@ -1,0 +1,5 @@
+project.manifest = manifest.xml
+
+# Build for Venu 3
+venu3.sourcePath = source
+venu3.resourcePath = resources

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
+    <iq:application
+        entry="StepDistanceApp"
+        id="D8E6F5A4B3C2D1E0F9A8B7C6D5E4F3A2"
+        launcherIcon="@Drawables.LauncherIcon"
+        minApiLevel="5.2.0"
+        name="@Strings.AppName"
+        type="datafield"
+        version="1.0.0">
+
+        <iq:products>
+            <iq:product id="venu3"/>
+        </iq:products>
+
+        <iq:permissions>
+            <!-- No permissions needed: ActivityMonitor is core Toybox API -->
+        </iq:permissions>
+
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+
+    </iq:application>
+</iq:manifest>
