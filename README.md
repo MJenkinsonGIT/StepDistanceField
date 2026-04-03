@@ -150,6 +150,8 @@ The `3,600,000 ÷ 160,934.4` factor converts from centimetres-per-millisecond to
 
 Speed resets to 0.0 whenever the activity timer is paused (auto-pause, manual pause) and resumes from 0 when the timer restarts, preventing stale speed values from persisting across pause events.
 
+Garmin's `ActivityMonitor.distance` is a live sensor-fused value and can undergo brief downward corrections — for example, during stride-length calibration in the first few seconds of an activity. If the distance value momentarily decreases, the delta between the current and oldest buffered value becomes negative, which would produce a nonsensical negative speed. To guard against this, the speed display is only updated when the calculated value is non-negative; if a correction produces a negative result, the display holds its last valid reading until the calculation produces a sensible value again. This causes a very brief freeze rather than a visible dip to zero or a negative readout.
+
 ---
 
 ## Accuracy Notes

@@ -167,7 +167,8 @@ class StepDistanceView extends WatchUi.DataField {
             _bufDistances[_bufWriteIdx]  = sessionDistCm;
             _bufWriteIdx = (_bufWriteIdx + 1) % SPEED_BUFFER_SIZE;
 
-            _speedMph = calculateRollingSpeed(nowMs, sessionDistCm);
+            var newSpeed = calculateRollingSpeed(nowMs, sessionDistCm);
+            if (newSpeed >= 0.0f) { _speedMph = newSpeed; }
         } else {
             _speedMph = 0.0f;
         }

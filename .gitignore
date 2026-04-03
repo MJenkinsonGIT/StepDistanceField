@@ -2,6 +2,7 @@ bin/
 obj/
 gen/
 mir/
+Claude Transcripts/
 internal-mir/
 .project
 .settings/
